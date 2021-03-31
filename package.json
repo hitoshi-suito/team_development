@@ -12,6 +12,7 @@
     "rails-ujs": "^5.2.0"
   },
   "devDependencies": {
+    "webpack-cli": "^4.6.0",
     "webpack-dev-server": "3.1.11"
   }
 }
