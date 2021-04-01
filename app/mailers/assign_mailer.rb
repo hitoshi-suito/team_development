@@ -6,11 +6,8 @@ class AssignMailer < ApplicationMailer
     mail to: @email, subject: I18n.t('views.messages.complete_registration')
   end
   def destroy_mail(agenda)
-    binding.pry
-    @agenda = agenda
-    binding.pry
-    @emails = agenda.team.users
-    binding.pry
+    @agenda = agenda  
+    @emails = agenda.team.users    
     @emails.each do |email|
       mail to: email, subject: "アジェンダが削除されました"
     end 
