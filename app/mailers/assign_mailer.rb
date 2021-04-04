@@ -7,9 +7,9 @@ class AssignMailer < ApplicationMailer
   end
   def destroy_mail(agenda)
     @agenda = agenda  
-    @emails = agenda.team.users    
+    @emails = agenda.team.members
     @emails.each do |email|
-      mail to: email, subject: "アジェンダが削除されました"
-    end 
+    mail to: email, subject: "アジェンダが削除されました"
+    end
   end
 end
